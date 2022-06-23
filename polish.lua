@@ -21,6 +21,14 @@ return function()
     ]])
 		end,
 	})
+
+	-- sqls
+	vim.api.nvim_create_autocmd("BufWritePost", {
+		desc = "Execute the SQL file after saving",
+		pattern = "*.sql",
+		command = "SqlsExecuteQuery",
+	})
+
 	-- Set up custom filetypes
 	-- vim.filetype.add {
 	--   extension = {

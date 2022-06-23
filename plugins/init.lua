@@ -18,4 +18,8 @@ return {
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
 		config = require("todo-comments").setup(),
+	},
+
+	-- sqls
+	{ "nanotee/sqls.nvim" },
 }
