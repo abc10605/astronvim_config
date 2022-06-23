@@ -1,5 +1,7 @@
 return function()
 	-- Set key binding
+	vim.keymap.del("t", "<esc>")
+
 	-- Set autocommands
 	vim.api.nvim_create_augroup("packer_conf", { clear = true })
 	vim.api.nvim_create_autocmd("BufWritePost", {
