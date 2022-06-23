@@ -11,6 +11,16 @@ return function()
 		command = "source <afile> | PackerSync",
 	})
 
+	-- close specific window(buffer) with q key
+	vim.api.nvim_create_autocmd({ "FileType" }, {
+		pattern = { "qf", "help", "man", "lspinfo", "notify", "dap-float", "sqls_output", "tsplayground", "aerial" },
+		callback = function()
+			vim.cmd([[
+      nnoremap <silent> <buffer> q :close<CR> 
+      set nobuflisted 
+    ]])
+		end,
+	})
 	-- Set up custom filetypes
 	-- vim.filetype.add {
 	--   extension = {
