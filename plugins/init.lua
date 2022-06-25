@@ -13,11 +13,13 @@ return {
 	--   end,
 	-- },
 
-	-- todo comments
+	-- todo
 	{
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
-		config = require("todo-comments").setup(),
+		config = function()
+			require("todo-comments").setup()
+		end,
 	},
 
 	-- lsp
