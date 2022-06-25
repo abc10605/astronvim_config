@@ -20,7 +20,7 @@ return {
 		config = require("todo-comments").setup(),
 	},
 
-	-- sqls
+	-- lsp
 	{ "nanotee/sqls.nvim" },
 
 	-- colorscheme

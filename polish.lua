@@ -1,6 +1,26 @@
+Sql_ext = {
+	"ansi",
+	"bigquery",
+	"clickhouse",
+	"databricks",
+	"db2",
+	"exasol",
+	"hive",
+	"mysql",
+	"oracle",
+	"postgres",
+	"redshift",
+	"snowflake",
+	"soql",
+	"sparksql",
+	"sqlite",
+	"teradata",
+	"tsql",
+}
+
 return function()
 	-- Set key binding
-	vim.keymap.del("t", "<esc>")
+	vim.keymap.del("t", "<esc>") -- disable esc on toggleterm
 
 	-- Set autocommands
 	vim.api.nvim_create_augroup("packer_conf", { clear = true })
@@ -23,13 +43,22 @@ return function()
 	})
 
 	-- sqls
+	vim.api.nvim_create_augroup("sqls", { clear = true })
 	vim.api.nvim_create_autocmd("BufWritePost", {
 		desc = "Execute the SQL file after saving",
+		group = "sqls",
 		pattern = "*.sql",
 		command = "SqlsExecuteQuery",
 	})
 
 	-- Set up custom filetypes
+	for _, e in ipairs(Sql_ext) do
+		vim.filetype.add({
+			extension = {
+				[e] = "sql",
+			},
+		})
+	end
 	-- vim.filetype.add {
 	--   extension = {
 	--     foo = "fooscript",
