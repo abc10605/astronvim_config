@@ -1,22 +1,22 @@
 return {
-  plugins = {
-    marks = true,
-    registers = true,
-    spelling = {
-      enabled = true,
-      suggestions = 20,
-    },
-    presets = {
-      operators = false,
-      motions = false,
-      text_objects = true,
-      windows = true,
-      nav = false,
-      z = true,
-      g = true,
-    },
-  },
-  layout = {
-    align = "center",
-  },
+	plugins = {
+		marks = true,
+		registers = true,
+		spelling = {
+			enabled = true,
+			suggestions = 20,
+		},
+		presets = {
+			operators = false,
+			motions = false,
+			text_objects = true,
+			windows = true,
+			nav = false,
+			z = true,
+			g = true,
+		},
+	},
+	layout = {
+		align = "center",
+	},
 }
