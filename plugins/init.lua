@@ -25,6 +25,12 @@ return {
 	-- lsp
 	{ "nanotee/sqls.nvim" },
 
+	-- value manipulation
+	{
+		"monaqa/dial.nvim",
+		config = require("user.plugins.dial"),
+	},
+
 	-- colorscheme
 	{ "EdenEast/nightfox.nvim" },
 }
