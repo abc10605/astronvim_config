@@ -22,4 +22,7 @@ return {
 
 	-- sqls
 	{ "nanotee/sqls.nvim" },
+
+	-- colorscheme
+	{ "EdenEast/nightfox.nvim" },
 }

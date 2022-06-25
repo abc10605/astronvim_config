@@ -1,7 +1,7 @@
 return {
 
 	-- Set colorscheme
-	colorscheme = "default_theme",
+	colorscheme = "nightfox",
 
 	-- Default theme configuration
 	default_theme = {
