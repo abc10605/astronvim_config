@@ -33,4 +33,7 @@ return {
 
 	-- colorscheme
 	{ "EdenEast/nightfox.nvim" },
+
+	-- surroundings
+	{ "machakann/vim-sandwich" },
 }
