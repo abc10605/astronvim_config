@@ -36,4 +36,11 @@ return {
 
 	-- surroundings
 	{ "machakann/vim-sandwich" },
+
+	-- motion
+	{
+		"phaazon/hop.nvim",
+		branch = "v1", -- optional but strongly recommended
+		config = require("user.plugins.hop"),
+	},
 }
