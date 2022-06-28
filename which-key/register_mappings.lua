@@ -6,6 +6,12 @@ return {
 			-- which-key registration table for normal mode, leader prefix
 			-- ["N"] = { "<cmd>tabnew<cr>", "New Buffer" },
 
+			-- todo
+			s = {
+				name = "Search",
+				t = { "<cmd>TodoTelescope<cr>", "Todo" },
+			},
+
 			-- hop
 			H = {
 				name = "Hop",
