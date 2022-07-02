@@ -43,4 +43,16 @@ return {
 		branch = "v1", -- optional but strongly recommended
 		config = require("user.plugins.hop"),
 	},
+
+	-- Markdown preview
+	{
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"](0)
+		end,
+		config = require("user.plugins.markdown-preview"),
+		ft = {
+			"markdown",
+		},
+	},
 }
