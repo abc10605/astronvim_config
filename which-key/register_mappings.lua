@@ -21,6 +21,62 @@ return {
 				["2"] = { "<cmd>HopChar2<cr>", "2 Char" },
 				l = { "<cmd>HopLine<cr>", "Line" },
 			},
+
+			-- ZK
+			n = {
+				name = "Notes",
+				b = {
+					function()
+						require("zk.commands").get("ZkBacklinks")()
+					end,
+					"Backlink Picker",
+				},
+				d = {
+					function()
+						require("zk.commands").get("ZkCd")()
+					end,
+					"Change Directory",
+				},
+				r = {
+					function()
+						require("zk.commands").get("ZkIndex")()
+					end,
+					"Refresh Index",
+				},
+				l = {
+					function()
+						require("zk.commands").get("ZkLinks")()
+					end,
+					"Link Picker",
+				},
+				s = {
+					function()
+						require("zk.commands").get("ZkNotes")({ sort = { "modified" } })
+					end,
+					"Search",
+				},
+				n = {
+					function()
+						require("zk.commands").get("ZkNew")({ title = vim.fn.input("Title: ") })
+					end,
+					"New Note",
+				},
+				t = {
+					function()
+						require("zk.commands").get("ZkTags")()
+					end,
+					"Tags",
+				},
+			},
+		},
+	},
+
+	-- visual mode
+	v = {
+		-- ZK
+		n = {
+			name = "Notes",
+			m = { ":'<,'>ZkMatch<CR>", "Match" },
 		},
 	},
 }
