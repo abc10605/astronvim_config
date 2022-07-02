@@ -55,4 +55,10 @@ return {
 			"markdown",
 		},
 	},
+
+	-- note-taking (zk)
+	{
+		"mickael-menu/zk-nvim",
+		config = require("user.plugins.zk"),
+	},
 }
