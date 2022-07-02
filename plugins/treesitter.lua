@@ -18,6 +18,7 @@ return {
 		"markdown",
 		"query",
 		"regex",
+		"toml",
 		"vim",
 		"yaml",
 	},
