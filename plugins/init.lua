@@ -32,7 +32,10 @@ return {
 	},
 
 	-- colorscheme
-	{ "EdenEast/nightfox.nvim" },
+	{
+		"EdenEast/nightfox.nvim",
+		config = require("user.plugins.nightfox"),
+	},
 
 	-- surroundings
 	{ "machakann/vim-sandwich" },
