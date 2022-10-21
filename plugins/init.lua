@@ -13,55 +13,36 @@ return {
 	--   end,
 	-- },
 
-	-- todo
-	{
-		"folke/todo-comments.nvim",
-		requires = "nvim-lua/plenary.nvim",
-		config = function()
-			require("todo-comments").setup()
-		end,
-	},
+	-- cmp
+	["hrsh7th/cmp-calc"] = require("user.plugins.cmp-calc"),
+	["hrsh7th/cmp-emoji"] = require("user.plugins.cmp-emoji"),
+	["hrsh7th/cmp-omni"] = require("user.plugins.cmp-omni"),
+	["jc-doyle/cmp-pandoc-references"] = require("user.plugins.cmp-pandoc-references"),
 
-	-- lsp
-	{ "nanotee/sqls.nvim" },
+	-- dap
+	["mehalter/mason-nvim-dap.nvim"] = require("user.plugins.mason-nvim-dap"),
+	["mfussenegger/nvim-dap"] = require("user.plugins.dap"),
+	["rcarriga/nvim-dap-ui"] = require("user.plugins.dapui"),
+	["theHamsta/nvim-dap-virtual-text"] = require("user.plugins.nvim-dap-virtual-text"),
+
+	-- telescope
+	["nvim-telescope/telescope-file-browser.nvim"] = require("user.plugins.telescope-file-browser"),
+	["nvim-telescope/telescope-hop.nvim"] = require("user.plugins.telescope-hop"),
+	["nvim-telescope/telescope-media-files.nvim"] = require("user.plugins.telescope-media-files"),
+	["nvim-telescope/telescope-project.nvim"] = require("user.plugins.telescope-project"),
+
+	-- todo
+	["folke/todo-comments.nvim"] = require("user.plugins.todo-comments"),
 
 	-- value manipulation
-	{
-		"monaqa/dial.nvim",
-		config = require("user.plugins.dial"),
-	},
+	["monaqa/dial.nvim"] = require("user.plugins.dial"),
 
 	-- colorscheme
-	{
-		"EdenEast/nightfox.nvim",
-		config = require("user.plugins.nightfox"),
-	},
+	["EdenEast/nightfox.nvim"] = require("user.plugins.nightfox"),
 
 	-- surroundings
-	{ "machakann/vim-sandwich" },
+	["machakann/vim-sandwich"] = require("user.plugins.vim-sandwich"),
 
 	-- motion
-	{
-		"phaazon/hop.nvim",
-		branch = "v1", -- optional but strongly recommended
-		config = require("user.plugins.hop"),
-	},
-
-	-- Markdown preview
-	{
-		"iamcco/markdown-preview.nvim",
-		run = function()
-			vim.fn["mkdp#util#install"](0)
-		end,
-		config = require("user.plugins.markdown-preview"),
-		ft = {
-			"markdown",
-		},
-	},
-
-	-- note-taking (zk)
-	{
-		"mickael-menu/zk-nvim",
-		config = require("user.plugins.zk"),
-	},
+	["phaazon/hop.nvim"] = require("user.plugins.hop"),
 }

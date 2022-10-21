@@ -1,7 +1,5 @@
 return {
-	close_if_last_window = true,
 	enable_diagnostics = true,
-	enable_git_status = true,
 	filesystem = {
 		commands = {
 			copy_file_name = function(state)
