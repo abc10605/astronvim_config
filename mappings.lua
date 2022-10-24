@@ -27,6 +27,92 @@ return {
 		["<leader>H1"] = { "<cmd>HopChar1<cr>", desc = "1 Char" },
 		["<leader>H2"] = { "<cmd>HopChar2<cr>", desc = "2 Char" },
 		["<leader>Hl"] = { "<cmd>HopLine<cr>", desc = "Line" },
+
+		-- Debugger
+		["<leader>Db"] = {
+			function()
+				require("dap").toggle_breakpoint()
+			end,
+			desc = "Toggle Breakpoint",
+		},
+		["<leader>DB"] = {
+			function()
+				require("dap").clear_breakpoints()
+			end,
+			desc = "Clear Breakpoints",
+		},
+		["<leader>Dc"] = {
+			function()
+				require("dap").continue()
+			end,
+			desc = "Continue",
+		},
+		["<leader>Di"] = {
+			function()
+				require("dap").step_into()
+			end,
+			desc = "Step Into",
+		},
+		["<leader>Dl"] = {
+			function()
+				require("dapui").float_element("breakpoints")
+			end,
+			desc = "List Breakpoints",
+		},
+		["<leader>Do"] = {
+			function()
+				require("dap").step_over()
+			end,
+			desc = "Step Over",
+		},
+		["<leader>Dq"] = {
+			function()
+				require("dap").close()
+			end,
+			desc = "Close Session",
+		},
+		["<leader>DQ"] = {
+			function()
+				require("dap").terminate()
+			end,
+			desc = "Terminate",
+		},
+		["<leader>Dr"] = {
+			function()
+				require("dap").repl.toggle()
+			end,
+			desc = "REPL",
+		},
+		["<leader>Ds"] = {
+			function()
+				require("dapui").float_element("scopes")
+			end,
+			desc = "Scopes",
+		},
+		["<leader>Dt"] = {
+			function()
+				require("dapui").float_element("stacks")
+			end,
+			desc = "Threads",
+		},
+		["<leader>Du"] = {
+			function()
+				require("dapui").toggle()
+			end,
+			desc = "Toggle Debugger UI",
+		},
+		["<leader>Dw"] = {
+			function()
+				require("dapui").float_element("watches")
+			end,
+			desc = "Watches",
+		},
+		["<leader>Dx"] = {
+			function()
+				require("dap.ui.widgets").hover()
+			end,
+			desc = "Inspect",
+		},
 	},
 	t = {
 		-- setting a mapping to false will disable it

@@ -9,6 +9,7 @@ return {
 			-- group name in which-key top level menu
 			["b"] = { name = "Buffer" },
 			["H"] = { name = "Hop" },
+			["D"] = { name = "Debugger" },
 		},
 	},
 }
